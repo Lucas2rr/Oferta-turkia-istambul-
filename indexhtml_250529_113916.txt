@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Estambul Mágico te Espera! - Boletos Seguros</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;700;900&family=Roboto:wght@400;500;700&family=Cookie&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif; /* Nueva fuente base más moderna */
+            background-color: #1a1a2e; /* Fondo oscuro azulado/morado */
+        }
+        .font-anton {
+            font-family: 'Anton', sans-serif;
+        }
+        .font-montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .font-cookie {
+            font-family: 'Cookie', cursive;
+        }
+
+        .flyer-container {
+            /* Usaremos un placeholder para la imagen de fondo */
+            background-image: url('https://placehold.co/600x900/3498db/ffffff?text=Fondo+Estambul'); /* Reemplaza con tu imagen: images/istanbul_background.jpg */
+            background-color: #2c3e50; /* Fallback */
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+            position: relative;
+            overflow: hidden;
+            border: 3px solid #FFC107; /* Borde dorado */
+        }
+        .flyer-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* Gradiente sutil para más dinamismo y mejor legibilidad */
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 70%, rgba(0,0,0,0.8) 100%);
+            z-index: 1;
+        }
+        .flyer-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .featured-image {
+            border: 4px solid #fff; /* Borde más grueso y blanco */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            border-radius: 8px; /* Bordes redondeados para las imágenes */
+        }
+        .featured-image:hover {
+            transform: scale(1.08) rotate(0deg) !important;
+            box-shadow: 0 12px 30px rgba(255,193,7,0.5); /* Sombra dorada al pasar el mouse */
+            z-index: 10;
+        }
+
+        .img-feat-1 { transform: rotate(-10deg) translateX(-8px) translateY(8px); z-index: 3; }
+        .img-feat-2 { transform: rotate(5deg) translateX(8px) translateY(-15px); margin-top: -35%; z-index: 2; }
+        .img-feat-3 { transform: rotate(-7deg) translateX(-5px) translateY(10px); margin-top: -35%; z-index: 1; }
+
+        .incluye-title {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900; /* Más grueso */
+            font-size: 1.8rem; /* Más grande */
+            line-height: 1;
+            margin-right: -8px; /* Ajuste */
+            color: #FFDE59; /* Amarillo más brillante */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+        }
+        .price-box-bg {
+            background: linear-gradient(135deg, #FFD700, #FFA000); /* Gradiente dorado/naranja */
+            color: #4A148C; /* Morado oscuro para el texto del precio */
+            border-radius: 10px;
+            border: 2px solid #fff;
+        }
+        .dates-bg {
+            background-color: rgba(40, 10, 70, 0.85); /* Morado oscuro semitransparente */
+            border: 1px solid #FFC107;
+            text-shadow: 0 0 5px #FFC107;
+        }
+        .btn-icon { width: 22px; height: 22px; margin-right: 10px; }
+        .footer-icon { width: 28px; height: 28px; margin-right: 10px; }
+
+        .text-glow-yellow {
+            color: #FFEB3B; /* Amarillo brillante */
+            text-shadow: 0 0 8px #FFEB3B, 0 0 12px #FFD700;
+        }
+        .text-glow-white {
+            color: #FFFFFF;
+            text-shadow: 0 0 8px #FFFFFF, 0 0 12px #DDDDDD;
+        }
+        .main-title-estambul {
+            color: #FFC107; /* Dorado principal */
+            text-shadow: 2px 2px 0px #000, /* Sombra negra para contorno */
+                         0 0 15px #FFC107, /* Resplandor dorado */
+                         0 0 20px #FF8F00; /* Resplandor naranja */
+        }
+        .logo-image {
+            max-width: 220px; /* Ajusta el tamaño de tu logo */
+            height: auto;
+            margin-bottom: -10px; /* Ajuste para que "DISFRUTA" esté más cerca */
+        }
+    </style>
+</head>
+<body class="flex justify-center items-center min-h-screen py-6 px-3 md:py-8 md:px-4">
+
+    <div class="flyer-container w-full max-w-sm md:max-w-md rounded-xl text-white">
+        <div class="flyer-content p-4 md:p-5 space-y-2 md:space-y-3">
+            <header class="text-center mb-2 md:mb-3">
+                <img src="https://placehold.co/220x80/000000/FFFFFF?text=Boletos+Seguros+Logo&font=cookie" alt="Logo Boletos Seguros" class="mx-auto logo-image">
+                </header>
+
+            <div class="text-center my-1 md:my-2">
+                <h1 class="font-anton text-5xl sm:text-6xl md:text-7xl leading-none text-glow-white">DISFRUTA</h1>
+                <h1 class="font-anton text-5xl sm:text-6xl md:text-7xl leading-none mt-[-10px] mb-1">EN <span class="main-title-estambul">ESTAMBUL</span></h1>
+                <p class="font-montserrat font-bold text-base sm:text-lg md:text-xl py-1.5 px-3 inline-block rounded-md shadow-lg" style="background-color: #FFC107; color: #4A148C;">¡5 DÍAS / 4 NOCHES DE ENSUEÑO!</p>
+            </div>
+
+            <div class="flex flex-row-reverse md:flex-row justify-between items-start mt-2 md:mt-3">
+                <div class="w-2/5 md:w-1/3 flex flex-col items-center space-y-0 relative md:mr-[-20px] mt-1 md:mt-2 featured-image-stack">
+                    <img src="https://placehold.co/300x200/8e44ad/ffffff?text=Estambul+1" alt="[Imagen de Vista panorámica de Estambul]" class="w-full featured-image img-feat-1">
+                    <img src="https://placehold.co/300x200/2980b9/ffffff?text=Estambul+2" alt="[Imagen de Detalle arquitectónico de Estambul]" class="w-full featured-image img-feat-2">
+                    <img src="https://placehold.co/300x200/c0392b/ffffff?text=Estambul+3" alt="[Imagen de Cultura y vida en Estambul]" class="w-full featured-image img-feat-3">
+                    </div>
+
+                <div class="w-3/5 md:w-2/3 pr-1.5 md:pr-2">
+                    <div class="flex items-start">
+                        <span class="incluye-title">INCLUYE</span>
+                        <ul class="list-none text-xs sm:text-sm space-y-1 pl-3 font-poppins font-medium">
+                            <li class="flex items-center"><span class="text-yellow-400 mr-1.5">✈️</span> Boletos ida y vuelta</li>
+                            <li class="flex items-center"><span class="text-yellow-400 mr-1.5">🏨</span> Hospedaje en Santa Sophia Hotel</li>
+                            <li class="flex items-center"><span class="text-yellow-400 mr-1.5">🥐</span> Desayunos buffet</li>
+                            <li class="flex items-center"><span class="text-yellow-400 mr-1.5">🚢</span> Crucero Bósforo y Cuerno de Oro</li>
+                        </ul>
+                    </div>
+
+                    <div class="price-box-bg font-montserrat font-black text-center p-2 md:p-3 rounded-lg mt-3 md:mt-4 inline-block shadow-xl">
+                        <p class="text-3xl sm:text-4xl md:text-5xl">750€</p>
+                        <p class="text-xs sm:text-sm font-bold">¡OFERTA 2 PERSONAS!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-3 md:mt-4">
+                <p class="font-montserrat text-xs sm:text-sm uppercase tracking-wider text-gray-300">SALIDAS EXCLUSIVAS DESDE</p>
+                <p class="font-montserrat font-bold text-base sm:text-lg md:text-xl text-glow-yellow">OPORTO, LISBOA O MADRID</p>
+            </div>
+
+            <div class="dates-bg text-center font-montserrat font-bold text-lg sm:text-xl md:text-2xl py-1.5 px-3 rounded-lg mt-2 md:mt-3 inline-block mx-auto shadow-lg">
+                12 AL 16 NOVIEMBRE 2025
+            </div>
+
+            <div class="text-center mt-3 md:mt-4 px-1 md:px-2">
+                <p class="font-montserrat font-semibold text-base sm:text-lg md:text-xl leading-tight text-glow-white">
+                    🇹🇷🕌 ¡Vive la Magia de ESTAMBUL como Nunca Antes! 🕌🇹🇷
+                </p>
+                <p class="text-sm sm:text-base mt-1.5 text-gray-200 leading-relaxed">
+                    Sumérgete en un viaje de ensueño por la ciudad de las mil y una noches. Sabores exóticos, monumentos imponentes y una cultura vibrante te esperan. <strong class="font-bold text-yellow-300">¡Esta es TU oportunidad! Plazas limitadas.</strong>
+                </p>
+            </div>
+
+            <footer class="mt-4 md:mt-5 pt-3 border-t-2 border-yellow-500 border-opacity-50">
+                <div class="flex justify-center items-center mb-2.5 md:mb-3">
+                    <img src="https://placehold.co/40x40/ffffff/000000?text=IG&font=montserrat" alt="[Icono de Instagram]" class="footer-icon rounded-full">
+                    <a href="https://www.instagram.com/boletosseguros/" target="_blank" class="font-montserrat font-bold text-base sm:text-lg md:text-xl hover:text-yellow-300 transition-colors duration-300">@BOLETOSSEGUROS</a>
+                </div>
+
+                <div class="space-y-2.5 md:space-y-3">
+                    <a href="https://wa.me/34643189310?text=Hola%2C%20estoy%20interesado%2Fa%20en%20el%20viaje%20a%20Estambul%20de%205%20d%C3%ADas%20por%20750%E2%82%AC%20para%202%20personas." target="_blank" class="flex items-center justify-center w-full bg-green-500 hover:bg-green-400 text-white font-bold py-2.5 md:py-3 px-4 rounded-lg transition-all duration-300 shadow-xl transform hover:scale-105">
+                        <img src="https://placehold.co/40x40/ffffff/25D366?text=WA&font=montserrat" alt="[Icono de WhatsApp]" class="btn-icon rounded-sm">
+                        ¡SÍ, QUIERO MI VIAJE! (WhatsApp)
+                    </a>
+                    <a href="https://www.instagram.com/boletosseguros/" target="_blank" class="flex items-center justify-center w-full bg-gradient-to-br from-purple-600 via-pink-500 to-orange-500 hover:from-purple-700 hover:via-pink-600 hover:to-orange-600 text-white font-bold py-2.5 md:py-3 px-4 rounded-lg transition-all duration-300 shadow-xl transform hover:scale-105">
+                        <img src="https://placehold.co/40x40/ffffff/E1306C?text=IG&font=montserrat" alt="[Icono de Instagram]" class="btn-icon rounded-sm">
+                        Descubre Más en Instagram
+                    </a>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script>
+        // Pequeño script para intentar pre-cargar las imágenes principales y reducir el "parpadeo"
+        // si las imágenes tardan en cargar. Es opcional.
+        const imageUrls = [
+            'https://placehold.co/600x900/3498db/ffffff?text=Fondo+Estambul', // Placeholder fondo
+            'https://placehold.co/300x200/8e44ad/ffffff?text=Estambul+1',     // Placeholder feature 1
+            'https://placehold.co/300x200/2980b9/ffffff?text=Estambul+2',     // Placeholder feature 2
+            'https://placehold.co/300x200/c0392b/ffffff?text=Estambul+3'      // Placeholder feature 3
+            // Añade aquí las URLs de tus imágenes reales una vez las tengas para pre-cargarlas.
+            // Ejemplo: 'images/istanbul_background.jpg', 'images/boletos_seguros_logo.png', etc.
+        ];
+        imageUrls.forEach(url => {
+            const img = new Image();
+            img.src = url;
+        });
+    </script>
+</body>
+</html>
